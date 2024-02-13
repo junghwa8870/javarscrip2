@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calcBMI(height, weight) {
+            var bmi = weight / ((height / 100) ** 2); // Convert height to meters
+            var message;
+
+            if (bmi >= 25.0) {
+                alert('당신은 과체중입니다.');
+            } else if (bmi <= 18.5) {
+                alert('당신은 저체중입니다.');
+            } else {
+                alert('당신은 정상체중입니다.');
+            }
+
+            console.log(`키 -> ${height.toFixed(1)}cm, 체중-> ${weight.toFixed(1)}kg의 체질량지수는: ${bmi.toFixed(2)}입니다.`);
+            console.log(message);
+        }
+
+        var height = +prompt(`키를 입력하세요 (cm)`); 
+        var weight = +prompt(`몸무게를 입력하세요 (kg)`);
+
+        calcBMI(height, weight);
+    </script>
+</body>
+</html>
